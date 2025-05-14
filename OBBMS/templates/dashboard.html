@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Online Blood Bank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, {{ user.name }}</h2>
+        <div class="user-info">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone:</strong> {{ user.phone }}</p>
+            <p><strong>Blood Group:</strong> {{ user.blood_group }}</p>
+        </div>
+        <a href="/generate_certificate" class="btn red">Generate Certificate</a>
+        <br><br>
+        <a href="/" class="btn">Logout</a>
+    </div>
+</body>
+</html>
